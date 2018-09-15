@@ -7,7 +7,7 @@ Please move to this other docker image  [https://hub.docker.com/r/jasonrivers/na
 
 # docker-nagios
 
-Docker container for [Nagios 4.3.4][3]
+Docker container for [Nagios 4.4.2][3]
 
 "Nagios Is The Industry Standard In IT Infrastructure Monitoring. Achieve instant awareness of IT infrastructure problems, so downtime doesn't adversely affect your business.Nagios offers complete monitoring and alerting for servers, switches, applications, and services."
 
