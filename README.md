@@ -1,10 +1,5 @@
 [![Docker Build Statu](https://img.shields.io/docker/build/quantumobject/docker-nagios.svg)](https://hub.docker.com/r/quantumobject/docker-nagios/) [![Docker Automated buil](https://img.shields.io/docker/automated/quantumobject/docker-nagios.svg)](https://hub.docker.com/r/quantumobject/docker-nagios/)
 
-
-Please move to this other docker image  [https://hub.docker.com/r/jasonrivers/nagios/] , I will remove mine . This other work better that mine ....
-
-
-
 # docker-nagios
 
 Docker container for [Nagios 4.4.2][3]
