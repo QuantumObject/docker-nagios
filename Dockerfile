@@ -1,6 +1,6 @@
 #name of container: docker-nagios
-#versison of container: 0.5.6
-FROM quantumobject/docker-baseimage:16.04
+#versison of container: 0.6.1
+FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 # Allow postfix to install without interaction.
@@ -9,13 +9,13 @@ RUN echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN apt-get update && apt-get install -y -q  wget \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q  wget \
                     build-essential \
                     apache2 \
                     apache2-utils \
                     iputils-ping \
-                    php7.0-gd \
-                    libapache2-mod-php7.0 \
+                    php-gd \
+                    libapache2-mod-php \
                     postfix \
                     libssl-dev \
                     unzip \
