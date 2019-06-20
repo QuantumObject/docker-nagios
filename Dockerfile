@@ -1,5 +1,5 @@
 #name of container: docker-nagios
-#versison of container: 0.6.1
+#versison of container: 0.6.2
 FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
