@@ -10,15 +10,15 @@
  usermod -a -G nagcmd www-data
  usermod -G nagios www-data
  cd /tmp
- wget https://sourceforge.net/projects/nagios/files/nagios-4.x/nagios-4.4.2/nagios-4.4.2.tar.gz
+ wget https://sourceforge.net/projects/nagios/files/nagios-4.x/nagios-4.4.3/nagios-4.4.3.tar.gz
  wget http://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz
  wget https://sourceforge.net/projects/nagios/files/nrpe-3.x/nrpe-3.2.1/nrpe-3.2.1.tar.gz
- tar -xvf nagios-4.4.2.tar.gz
+ tar -xvf nagios-4.4.3.tar.gz
  tar -xvf nagios-plugins-2.2.1.tar.gz
  tar -xvf nrpe-3.2.1.tar.gz
 
  #installing nagios
- cd /tmp/nagios-4.4.2
+ cd /tmp/nagios-4.4.3
   ./configure --with-nagios-group=nagios --with-command-group=nagcmd --with-mail=/usr/sbin/sendmail --with-httpd_conf=/etc/apache2/conf-available
   make all
   make install
