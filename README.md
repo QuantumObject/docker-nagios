@@ -43,7 +43,7 @@ $ htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 
 note: to access site is <http://server_ip:external_container_port/nagios/>
 
-update to nrpe-3.2.1
+update to nrpe-3.3.0
 
 update to nagios-plugins-2.3.1
 
