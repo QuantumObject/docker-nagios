@@ -13,7 +13,7 @@ Docker container for [Nagios 4.4.5][3]
 To install docker in Ubuntu 18.04 use the commands:
 
 ```
-$ sudo apt-get update I used this
+$ sudo apt-get update 
 $ sudo wget -qO- https://get.docker.com/ | sh
 ```
 
