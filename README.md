@@ -24,7 +24,7 @@ To install docker in other operating systems check [docker online documentation]
 To run container use the command below:
 
 ```
-$ docker run -d -p 25 -p 80 quantumobject/docker-nagios
+$ docker run -d -p 25 -p 80:80 --name nagios quantumobject/docker-nagios
 ```
 
 login : nagiosadmin password: admin please replace it after install.
@@ -43,9 +43,9 @@ $ htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 
 note: to access site is <http://server_ip:external_container_port/nagios/>
 
-update to nrpe-3.3.0
+update to nrpe-4.0.0
 
-update to nagios-plugins-2.3.1
+update to nagios-plugins-2.3.3
 
 ## More Info
 
