@@ -1,5 +1,5 @@
 #name of container: docker-nagios
-#versison of container: 0.6.2
+#versison of container: 0.6.3
 FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
@@ -9,7 +9,7 @@ RUN echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q  wget \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y -q  --no-install-recommends automake wget \
                     build-essential \
                     apache2 \
                     apache2-utils \
@@ -70,15 +70,8 @@ RUN chmod +x /sbin/pre-conf ; sync
 RUN /bin/bash -c /sbin/pre-conf \
     && rm /sbin/pre-conf
 
-
 ##Copy plguins installed though apt to location
 RUN cp /usr/lib/nagios/plugins/check_nrpe /usr/local/nagios/libexec/ ; sync
-
-##scritp that can be running from the outside using docker-bash tool ...
-## for example to create backup for database with convitation of VOLUME   dockers-bash container_ID backup_mysql
-COPY backup.sh /sbin/backup
-RUN chmod +x /sbin/backup
-VOLUME /var/backups
 
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server.
