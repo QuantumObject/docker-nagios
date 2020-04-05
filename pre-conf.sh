@@ -11,12 +11,12 @@
  usermod -G nagios www-data
  cd /tmp
  wget https://sourceforge.net/projects/nagios/files/nagios-4.x/nagios-4.4.5/nagios-4.4.5.tar.gz
- wget http://nagios-plugins.org/download/nagios-plugins-2.3.1.tar.gz
- wget https://sourceforge.net/projects/nagios/files/nrpe-3.x/nrpe-3.3.0/nrpe-3.3.0.tar.gz
+ wget http://nagios-plugins.org/download/nagios-plugins-2.3.3.tar.gz
+ wget https://sourceforge.net/projects/nagios/files/nrpe-4.x/nrpe-4.0.0/nrpe-4.0.0.tar.gz
  tar -xvf nagios-4.4.5.tar.gz
- tar -xvf nagios-plugins-2.3.1.tar.gz
- tar -xvf nrpe-3.3.0.tar.gz
- rm nagios-4.4.5.tar.gz nagios-plugins-2.3.1.tar.gz nrpe-3.3.0.tar.gz
+ tar -xvf nagios-plugins-2.3.3.tar.gz
+ tar -xvf nrpe-4.0.0.tar.gz
+ rm nagios-4.4.5.tar.gz nagios-plugins-2.3.3.tar.gz nrpe-4.0.0.tar.gz
  
  #installing nagios
  cd /tmp/nagios-4.4.5
@@ -36,12 +36,12 @@
   ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios
   
   #installing plugins 
-  cd /tmp/nagios-plugins-2.3.1/
+  cd /tmp/nagios-plugins-2.3.3/
   ./configure --with-nagios-user=nagios --with-nagios-group=nagios --enable-perl-modules --enable-extra-opts
   make
   make install
 
-  cd /tmp/nrpe-3.3.0/
+  cd /tmp/nrpe-4.0.0/
   ./configure --with-nrpe-user=nagios --with-nrpe-group=nagios --with-nagios-user=nagios --with-nagios-group=nagios  --with-ssl=/usr/bin/openssl --with-ssl-lib=/usr/lib/x86_64-linux-gnu
   make all
   make install-plugin
